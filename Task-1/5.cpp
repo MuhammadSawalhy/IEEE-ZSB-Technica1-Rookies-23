@@ -25,13 +25,13 @@ int main() {
 
   // see how many of them we can get
   // multiples of 3
-  // 3 ... 6 ... 9 ... 12 ... etc
+  // 5 ... 10 ... 15 ... 20 ... etc
 
   sum += calc(n / 5) * 5;
 
   // no remove duplications
   // multiples of 3 and 5, in other words multiples of 3*5
-  // 3 ... 6 ... 9 ... 12 ... etc
+  // 15 ... 30 ... 45 ... 60 ... etc
 
   sum -= calc(n / 15) * 15;
 

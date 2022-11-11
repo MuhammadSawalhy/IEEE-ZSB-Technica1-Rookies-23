@@ -97,5 +97,16 @@ int main() {
   }
   std::cout << std::endl;
 
+  list.tail->prev->erase();
+  list.head->erase();
+  // 4 3
+
+  current = list.head;
+  while (current != nullptr) {
+    std::cout << current->value << " ";
+    current = current->next;
+  }
+  std::cout << std::endl;
+
   return 0;
 }
