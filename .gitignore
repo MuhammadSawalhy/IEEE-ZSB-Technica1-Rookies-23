@@ -1,6 +1,7 @@
 *
 !*/
 !*.cpp
+!*.py
 !.gitignore
 !README.md
 !ieee-zsb.jpg
