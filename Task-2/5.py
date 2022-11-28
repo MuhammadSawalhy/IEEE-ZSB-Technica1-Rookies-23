@@ -12,7 +12,18 @@ def insertion_sort(a):
 
     Time Complexity:
         O(n*n), the worst case happens when the array is reversed
+
+    Stability:
+        insertion sort is a stable sorting algorithm, as it keeps the relative order between equivalent items
+        them same as the input unsorted array
+        for example, if we have:
+        {'name':'Muhamamd', age: 20}, {'name': 'samir', age:60}, {'name': 'Shaimaa', age: 20}
+        after sorting based on age we will have:
+        {'name':'Muhamamd', age: 20}, {'name': 'Shaimaa', age: 20}, {'name': 'Samir', age:60}
+
+        -> it is guarenteed that people with the same age will preserve the same relative order as the input
     """
+
     for i in range(len(a)):
         j = i
         ref = a[j]
