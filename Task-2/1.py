@@ -30,10 +30,18 @@ def get_hits(num, guess):
 
 def get_misses(num, guess):
     misses = 0
-    num = str(num)
-    guess = str(guess)
+    num = list(str(num))
+    guess = list(str(guess))
     for i in range(3):
-        misses += num[i] != guess[i] and (num[i] == guess[(i+1)%3] or num[i] == guess[(i+2)%3])
+        if num[i] == guess[i]:
+            guess[i] = ' '
+    for i in range(3):
+        if num[i] == guess[(i+1)%3]:
+            guess[i] = ' '
+            misses += 1
+        elif num[i] == guess[(i+2)%3]:
+            guess[i] = ' '
+            misses += 1
     return misses
 
 
