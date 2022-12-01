@@ -2,7 +2,7 @@
 
 
 n, m = [int(x) for x in input().split()]
-stations = [int(x) for x in input().split()]  # with length m
+stations = sorted([int(x) for x in input().split()])  # with length m
 
 
 def bisect_left(arr, value):
@@ -26,7 +26,9 @@ inf = 1e10
 ans = 0
 for i in range(n):
     j = bisect_left(stations, i)
-    ans = max(ans, min(stations[j] - i if j < m else inf,
-              i - stations[j - 1] if j > 0 else inf))
+    previous_station = stations[j] - i if j < m else inf
+    next_station = i - stations[j - 1] if j > 0 else inf
+    nearest_station = min(previous_station, next_station)
+    ans = max(ans, nearest_station)
 
 print(ans)
