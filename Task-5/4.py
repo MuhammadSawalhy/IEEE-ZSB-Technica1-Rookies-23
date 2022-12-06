@@ -8,7 +8,8 @@ def prime_factors(n):
         primes.append(2)
         n //= 2
 
-    for i in range(3, int(math.sqrt(n)) + 2):
+    # + 2 to fix any precision errors
+    for i in range(3, int(math.sqrt(n)) + 2, 2):
         while n % i == 0:
             primes.append(i)
             n //= i
