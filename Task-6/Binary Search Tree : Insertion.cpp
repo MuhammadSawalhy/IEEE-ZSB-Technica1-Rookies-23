@@ -26,24 +26,6 @@ class Solution {
         preOrder(root->right);
     }
 
-    /* you only have to complete the function given below.
-    Node is defined as
-
-    class Node {
-        public:
-            int data;
-            Node *left;
-            Node *right;
-            Node(int d) {
-                data = d;
-                left = NULL;
-                right = NULL;
-            }
-    };
-
-    */
-
-    // O(log n)
     Node *insert(Node *root, int data) {
         if (root == NULL)
             return new Node(data);
