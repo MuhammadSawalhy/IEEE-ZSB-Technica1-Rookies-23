@@ -39,6 +39,7 @@ class Solution {
 }; // End of Solution
 
 int main() {
+    std::cout << (!nullptr ? "YES" :"NO") << std::endl;
 
     Solution myTree;
     Node *root = NULL;
